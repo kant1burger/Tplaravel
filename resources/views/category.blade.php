@@ -1,12 +1,10 @@
 @extends('layouts.base')
 
 @section('content')
-    
-
 
 <section class="jumbotron text-center">
     <div class="container">
-        <h1 class="jumbotron-heading">Produits</h1>
+        <h1 class="jumbotron-heading">Catégorie</h1>
         <p class="lead text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, veniam, eius aliquam quidem rem sunt nam quaerat facilis ex error placeat ipsa illo sed inventore soluta ipsum cumque atque ea?</p>
     </div>
 </section>
@@ -16,8 +14,9 @@
         <div class="col">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Produits</li>
+                    <li class="breadcrumb-item"><a href="index">Accueil</a></li>
+                    <li class="breadcrumb-item"><a href="category">Catégorie</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Sous catégorie</li>
                 </ol>
             </nav>
         </div>
@@ -58,11 +57,11 @@
             <div class="card bg-light mb-3">
                 <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Catégories</div>
                 <ul class="list-group category_block">
-                    <li class="list-group-item"><a href="category.html">Cras justo odio</a></li>
-                    <li class="list-group-item"><a href="category.html">Dapibus ac facilisis in</a></li>
-                    <li class="list-group-item"><a href="category.html">Morbi leo risus</a></li>
-                    <li class="list-group-item"><a href="category.html">Porta ac consectetur ac</a></li>
-                    <li class="list-group-item"><a href="category.html">Vestibulum at eros</a></li>
+                    <li class="list-group-item"><a href="category">Cras justo odio</a></li>
+                    <li class="list-group-item"><a href="category">Dapibus ac facilisis in</a></li>
+                    <li class="list-group-item"><a href="category">Morbi leo risus</a></li>
+                    <li class="list-group-item"><a href="category">Porta ac consectetur ac</a></li>
+                    <li class="list-group-item"><a href="category">Vestibulum at eros</a></li>
                 </ul>
             </div>
             <div class="card bg-light mb-3">
@@ -77,7 +76,7 @@
                             <p class="btn btn-danger w-100">99,00 &euro;</p>
                         </div>
                         <div class="col">
-                            <a href="product.html" class="btn btn-success w-100">Voir</a>
+                            <a href="product" class="btn btn-success w-100">Voir</a>
                         </div>
                     </div>
                 </div>
@@ -89,7 +88,7 @@
                     <div class="card">
                         <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title"><a href="product.html" title="View Product">Produit</a></h4>
+                            <h4 class="card-title"><a href="product" title="View Product">Produit</a></h4>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             <div class="row">
                                 <div class="col">
@@ -106,7 +105,7 @@
                     <div class="card">
                         <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title"><a href="product.html" title="View Product">Produit</a></h4>
+                            <h4 class="card-title"><a href="product" title="View Product">Produit</a></h4>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             <div class="row">
                                 <div class="col">
@@ -123,7 +122,7 @@
                     <div class="card">
                         <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title"><a href="product.html" title="View Product">Produit</a></h4>
+                            <h4 class="card-title"><a href="product" title="View Product">Produit</a></h4>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             <div class="row">
                                 <div class="col">
@@ -140,7 +139,7 @@
                     <div class="card">
                         <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title"><a href="product.html" title="View Product">Produit</a></h4>
+                            <h4 class="card-title"><a href="product" title="View Product">Produit</a></h4>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             <div class="row">
                                 <div class="col">
@@ -157,7 +156,7 @@
                     <div class="card">
                         <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title"><a href="product.html" title="View Product">Produit</a></h4>
+                            <h4 class="card-title"><a href="product" title="View Product">Produit</a></h4>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             <div class="row">
                                 <div class="col">
@@ -174,7 +173,7 @@
                     <div class="card">
                         <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title"><a href="product.html" title="View Product">Produit</a></h4>
+                            <h4 class="card-title"><a href="product" title="View Product">Produit</a></h4>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             <div class="row">
                                 <div class="col">
@@ -210,61 +209,4 @@
     </div>
 </div>
 
-<!-- Footer -->
-<footer class="text-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-lg-4 col-xl-3">
-                <h5>A propos</h5>
-                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-                <p class="mb-0">
-                    Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
-                </p>
-            </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
-                <h5>Informations</h5>
-                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-                <ul class="list-unstyled">
-                    <li><a href="">Link 1</a></li>
-                    <li><a href="">Link 2</a></li>
-                    <li><a href="">Link 3</a></li>
-                    <li><a href="">Link 4</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
-                <h5>Others links</h5>
-                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-                <ul class="list-unstyled">
-                    <li><a href="">Link 1</a></li>
-                    <li><a href="">Link 2</a></li>
-                    <li><a href="">Link 3</a></li>
-                    <li><a href="">Link 4</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-4 col-lg-3 col-xl-3">
-                <h5>Contact</h5>
-                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-                <ul class="list-unstyled">
-                    <li><i class="fa fa-home ms-2"></i> My company</li>
-                    <li><i class="fa fa-envelope ms-2"></i> email@example.com</li>
-                    <li><i class="fa fa-phone ms-2"></i> + 33 12 14 15 16</li>
-                    <li><i class="fa fa-print ms-2"></i> + 33 12 14 15 16</li>
-                </ul>
-            </div>
-            <div class="col-12 copyright mt-3">
-                <p class="float-left">
-                    <a href="#">Back to top</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
-
 @endsection
-
-<!-- JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
