@@ -19,15 +19,11 @@
                     <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="https://dummyimage.com/855x365/55595c/fff" alt="First slide">
+                    @foreach ($products as $product)
+                    <div class="carousel-item @if ($loop->first) active @endif">
+                        <img class="d-block w-100" src="{{ $product->image }}" alt="First slide">
                     </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="https://dummyimage.com/855x365/1443ff/fff" alt="Third slide">
-                    </div>
+                    @endforeach
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -44,13 +40,13 @@
                 <div class="card-header bg-success text-white text-uppercase">
                     <i class="fa fa-heart"></i> Coup de coeur
                 </div>
-                <img class="img-fluid border-0" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
+                <img class="img-fluid border-0" src="{{ $bestproduct->image }}" alt="Card image cap">
                 <div class="card-body">
-                    <h4 class="card-title text-center"><a href="product" title="View Product">Produit</a></h4>
-                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                    <h4 class="card-title text-center"><a href="product" title="View Product">{{ $bestproduct->name }}</a></h4>
+                    <p class="card-text">{{ $bestproduct->description }}</p>
                     <div class="row">
                         <div class="col">
-                            <p class="btn btn-danger w-100">99,00 &euro;</p>
+                            <p class="btn btn-danger w-100">{{ $bestproduct->prix }} &euro;</p>
                         </div>
                         <div class="col">
                             <a href="product" class="btn btn-success w-100">Voir</a>

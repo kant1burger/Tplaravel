@@ -19,7 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index', [
-    //'randomProducts' => Product::
+    'bestproduct' => Product::where('coup_de_coeur', 1)->inRandomOrder()->first(),
+    'randomProducts' => Product::InRandomOrder()->limit(3)->get(),
     'products'=> Product::latest()->limit(4)->get(),
     ]);
 });
