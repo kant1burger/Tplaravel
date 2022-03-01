@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,11 +18,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('index', [
+    //'randomProducts' => Product::
+    'products'=> Product::latest()->limit(4)->get(),
+    ]);
 });
 
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/products/{product}', [ProductController::class, 'show']);
+
+//Route::get('/', [ProductController::class, 'latest']);
 
 Route::get('/categories/{category}', [CategoryController::class, 'show']);
 

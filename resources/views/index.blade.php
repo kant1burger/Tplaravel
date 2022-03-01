@@ -23,7 +23,7 @@
                         <img class="d-block w-100" src="https://dummyimage.com/855x365/55595c/fff" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="$product->image" alt="Second slide">
+                        <img class="d-block w-100" src="" alt="Second slide">
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="https://dummyimage.com/855x365/1443ff/fff" alt="Third slide">
@@ -69,17 +69,19 @@
                 <div class="card-header bg-primary text-white text-uppercase">
                     <i class="fa fa-star"></i> Derniers produits
                 </div>
+
                 <div class="card-body">
                     <div class="row">
+                        @foreach ($products as $product)
                         <div class="col-sm">
                             <div class="card">
-                                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
+                                <img class="card-img-top" src="{{ $product->image }}" alt="Card image cap">
                                 <div class="card-body">
-                                    <h4 class="card-title"><a href="product" title="View Product">Produit</a></h4>
-                                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <h4 class="card-title"><a href="product" title="View Product">{{ $product->name }}</a></h4>
+                                    <p class="card-text">{{ $product->description }}</p>
                                     <div class="row">
                                         <div class="col">
-                                            <p class="btn btn-danger w-100">99,00 &euro;</p>
+                                            <p class="btn btn-danger w-100">{{ $product->prix }} &euro;</p>
                                         </div>
                                         <div class="col">
                                             <a href="cart" class="btn btn-success w-100">Ajouter</a>
@@ -88,57 +90,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm">
-                            <div class="card">
-                                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title"><a href="product" title="View Product">Produit</a></h4>
-                                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="btn btn-danger w-100">99,00 &euro;</p>
-                                        </div>
-                                        <div class="col">
-                                            <a href="cart" class="btn btn-success w-100">Ajouter</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm">
-                            <div class="card">
-                                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title"><a href="product" title="View Product">Produit</a></h4>
-                                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="btn btn-danger w-100">99,00 &euro;</p>
-                                        </div>
-                                        <div class="col">
-                                            <a href="cart" class="btn btn-success w-100">Ajouter</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm">
-                            <div class="card">
-                                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title"><a href="product" title="View Product">Produit</a></h4>
-                                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="btn btn-danger w-100">99,00 &euro;</p>
-                                        </div>
-                                        <div class="col">
-                                            <a href="cart" class="btn btn-success w-100">Ajouter</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
+
+                        
                     </div>
                 </div>
             </div>

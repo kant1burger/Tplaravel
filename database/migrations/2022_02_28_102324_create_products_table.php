@@ -22,7 +22,7 @@ return new class extends Migration
             $table->boolean('coup_de_coeur');
             $table->text('color')->nullable();
             $table->string('image')->nullable();
-            $table->foreignId('categories')->nullable()->constrained();
+            $table->string('categories')->nullable()->constrained();
             $table->integer('promotion')->nullable();
             $table->timestamps();
         });
