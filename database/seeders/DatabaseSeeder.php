@@ -22,12 +22,13 @@ class DatabaseSeeder extends Seeder
         $this->faker = Faker::create();
         $name= Str::random(5);
         $namename= Str::random(5);
-        $cat= Category::latest()->first()->id;
 
         DB::table('categories')->insert([
             'name' => $namename,
             'slug' => Str::slug($namename),
         ]);
+
+        $cat= Category::latest('id')->first()->id;
 
         DB::table('products')->insert([
             'name' => $name,
