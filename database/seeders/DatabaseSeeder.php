@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->faker = Faker::create();
         $name= Str::random(5);
+        $namename= Str::random(5);
 
         DB::table('products')->insert([
             'name' => $name,
@@ -31,5 +32,12 @@ class DatabaseSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now(),
         ]);
+   
+
+        DB::table('categories')->insert([
+            'name' => $namename,
+            'slug' => Str::slug($namename),
+        ]);
+
     }
 }

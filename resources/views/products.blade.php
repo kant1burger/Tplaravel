@@ -56,11 +56,10 @@
             <div class="card bg-light mb-3">
                 <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Catégories</div>
                 <ul class="list-group category_block">
-                    <li class="list-group-item"><a href="category">Cras justo odio</a></li>
-                    <li class="list-group-item"><a href="category">Dapibus ac facilisis in</a></li>
-                    <li class="list-group-item"><a href="category">Morbi leo risus</a></li>
-                    <li class="list-group-item"><a href="category">Porta ac consectetur ac</a></li>
-                    <li class="list-group-item"><a href="category">Vestibulum at eros</a></li>
+                    @foreach ($categories as $category)
+                    <li class="list-group-item"><a href="category/{{ $category->id }}-{{ $category->slug }}">{{ $category->name }}</a></li>
+                    
+                    @endforeach
                 </ul>
             </div>
 
