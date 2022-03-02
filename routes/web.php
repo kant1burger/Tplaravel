@@ -34,8 +34,8 @@ Route::get('/products/{product}', [ProductController::class, 'show']);
 
 Route::get('/categories/{category}', [CategoryController::class, 'show']);
 
-Route::get('/admin', [AdminController::class, 'show']);
-Route::get('/admin/produits', [AdminController::class, 'index' ]);
+Route::get('/admin', [AdminController::class, 'index']);
+Route::get('/admin/produits', [AdminController::class, 'show' ]);
 Route::get('/admin/produits/creer', [AdminController::class, 'create']);
 Route::get('/admin/produits/modifier', [AdminController::class, 'edit']);
 Route::get('/admin/produits/supprimer', [AdminController::class, 'delete']);

@@ -73,7 +73,7 @@
                     </div>
 
                     <div>
-                        Bonjour Toto
+                        Bonjour , Ô vénérable utilisateur, supprimeur de catégorie.
                     </div>
                 </main>
             </div>
